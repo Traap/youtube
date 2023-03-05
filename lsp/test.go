@@ -1,20 +1,22 @@
-// Shoutout to Brian Kernighan
+// Shoutout to Brian Kernighan and Fibonacci sequence using recursion in Go.
 package main
 
-import (
-	"fmt"
-	"math/big"
-)
+import "fmt"
+
+func fibonacci(n int) int {
+	if n <= 1 {
+		return n
+	}
+	return fibonacci(n-1) + fibonacci(n-2)
+}
 
 func main() {
-	fmt.Println("Hello World!")
+	fmt.Println("Hello world!")
 
-	F1 := big.NewInt(0)
-	F2 := big.NewInt(1)
-
-	for {
-		F1.Add(F1, F2)
-		F1, F2 = F2, F1
-		fmt.Printf("%v\n", F1)
+	fmt.Println("Fibonacci sequence using recursion in Go:")
+	for i := 0; i <= 10; i++ {
+		fmt.Printf("%d ", fibonacci(i))
 	}
+	fmt.Println()
+
 }
