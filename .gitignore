@@ -1,3 +1,5 @@
 havasu/
 target/
 sysofsys/
+bin/
+obj/
