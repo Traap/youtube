@@ -11,7 +11,6 @@ end
 puts 'Hello World!'
 
 puts 'Fibonacci sequence usng recursion in Ruby:'
-
 11.times do |idx|
   print "#{fibonacci(idx)} "
 end

@@ -9,6 +9,7 @@ function fibonacci(n: number): number {
 }
 
 console.log("Hello World!");
+
 console.log("Fibonacci sequence use recursion in Typescript:");
 for (let i = 0; i <= 10; i++) {
   process.stdout.write(fibonacci(i) + ' ');
