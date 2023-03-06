@@ -1,13 +1,12 @@
 # Experimental Noice Plugin
-
-* Welcome back everyone.
-
+## Welcome back everyone.
 * My name is Traap.
 
+## Overview
 * I will demonstrate Amazing flexibility using [lazy.nvim](https://github.com/folke/lazy.nvim) a modern plugin manager
   for Neovim.
 
-* The following tools are used.
+### The following tools are used.
 
   - My Personal Development Environment - [Tj DeVries](https://github.com/tjdevries) shout out!
     * Bash shell
@@ -20,7 +19,7 @@
 
     * [Telescope](https://github.com/nvim-telescope/telescope.nvim) Gaze deeply into unknown regions using the power of the moon.
 
-  - Customization Order
+### Customization Order
     * Notifications
       + [noice.nvim Noice (Nice, Noise, Notice)](https://github.com/folke/noice.nvim) a Highly experimental plugin
         that replaces the UI for messages, cmdline and the popup menu.
