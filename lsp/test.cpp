@@ -2,6 +2,9 @@
 #include <iostream>
 using namespace std;
 
+// Youtube: Integer overflow occurs at 47.
+static int FIBONACCI_MAX = 48;
+
 class Fibonacci {
 public:
   int sequence(int n) {
@@ -13,12 +16,12 @@ public:
 };
 
 int main(int argc, char *argv[]) {
-  cout << "Hello World!\n";
+  cout << "Shoutout to Brian Kernighan: Hello World!\n";
 
   cout << "Fibonacci sequence using recursion in C++:\n";
   Fibonacci fibonacci = *new Fibonacci();
-  for (int i = 0; i <= 10; i++) {
-    printf("%d ", fibonacci.sequence(i));
+  for (int i = 0; i <= FIBONACCI_MAX; i++) {
+    printf("%d : %d \n", i, fibonacci.sequence(i));
   }
   cout << "\n";
   return 0;

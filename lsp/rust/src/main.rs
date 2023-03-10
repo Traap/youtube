@@ -8,11 +8,11 @@ fn fibonacci(n: u32) -> u32 {
 }
 
 fn main() {
-    println!("Hello World!");
+    println!("Shoutout to Brian Kernighan: Hello World!");
 
     println!("Fibonacci sequence using recursion in Rust:");
-    for i in 0..11 {
-        print!("{} ", fibonacci(i));
+    for i in 0..48 {
+        println!("{} : {} ", i, fibonacci(i));
     }
-    println!("")
+    println!()
 }

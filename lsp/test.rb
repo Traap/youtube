@@ -8,10 +8,9 @@ def fibonacci(nbr)
   fibonacci(nbr - 1) + fibonacci(nbr - 2)
 end
 
-puts 'Hello World!'
+puts 'Shoutout to Brian Kernighan: Hello World!'
 
 puts 'Fibonacci sequence usng recursion in Ruby:'
-11.times do |idx|
-  print "#{fibonacci(idx)} "
+49.times do |idx|
+  puts "#{idx} : #{fibonacci(idx)} "
 end
-puts

@@ -1,5 +1,8 @@
 // Shoutout to Brian Kernighan and Fibonacci sequence using recursion in
 // Typescipt.
+
+let FIBONACCI_MAX = 48
+
 function fibonacci(n: number): number {
   if (n <= 1) {
     return n;
@@ -8,10 +11,10 @@ function fibonacci(n: number): number {
   return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
-console.log("Hello World!");
+console.log("Shoutout to Brian Kernighan: Hello World!");
 
-console.log("Fibonacci sequence use recursion in Typescript:");
-for (let i = 0; i <= 10; i++) {
-  process.stdout.write(fibonacci(i) + ' ');
+console.log("Fibonacci sequence using recursion in Typescript:");
+for (let i = 0; i <= FIBONACCI_MAX; i++) {
+  console.log(i + ' : ' + fibonacci(i));
 }
 console.log('');
