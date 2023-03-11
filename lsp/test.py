@@ -1,4 +1,5 @@
 # Shoutout to Brian Kernighan and Fibonacci sequence using recursion in Python.
+FIBONACCI_MAX = 35
 
 
 # Fibonacci sequence done with Python.
@@ -12,6 +13,6 @@ def fibonacci(n):
 print("Shoutout to Brian Kernighan: Hello World!")
 
 print("Fibonacci sequence using recursion in Python:")
-for i in range(0, 48):
+for i in range(0, FIBONACCI_MAX):
     print("{} : {}".format(i, fibonacci(i)))
 print('')

@@ -1,4 +1,4 @@
--- Fibonacci sequence using recursion.
+-- Shoutout to Brian Kernighan and Fibonacci sequence using recursion in Haskell.
 
 -- This Works.
 fibonacci :: Int -> IO ()
@@ -16,4 +16,6 @@ fibonacci n = mapM_ putStrLn $ map show $ take n fibs
 -- Program to print a Fibonacci sequence.
 main :: IO ()
 main = do
-  fibonacci 11
+  putStrLn "Shoutout to Brian Kernighan: Hello World!"
+  putStrLn "Fibonacci sequence using recursion in Haskell."
+  fibonacci 35

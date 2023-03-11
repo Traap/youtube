@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+FIBBONACCI_MAX = 35
+
 # Shoutout to Brian Kernighan and Fibonacci sequence using recursion in Ruby.
 
 def fibonacci(nbr)
@@ -11,6 +13,6 @@ end
 puts 'Shoutout to Brian Kernighan: Hello World!'
 
 puts 'Fibonacci sequence usng recursion in Ruby:'
-49.times do |idx|
+FIBBONACCI_MAX.times do |idx|
   puts "#{idx} : #{fibonacci(idx)} "
 end

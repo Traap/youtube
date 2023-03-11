@@ -1,7 +1,7 @@
 // Shoutout to Brian Kernighan and Fibonacci sequence using recursion in
 // Typescipt.
 
-let FIBONACCI_MAX = 48
+let FIBONACCI_MAX = 35
 
 function fibonacci(n: number): number {
   if (n <= 1) {

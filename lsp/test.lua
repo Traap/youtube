@@ -1,5 +1,5 @@
 -- Shoutout to Brian Kernighan and Fibonacci sequence using recursion in Lua.
-FIBONACCI_MAX = 20
+FIBONACCI_MAX = 35
 
 function Fibonacci(n)
 	if n <= 1 then

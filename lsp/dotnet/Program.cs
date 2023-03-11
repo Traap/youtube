@@ -2,28 +2,28 @@
 class Program
 {
 
-  // Youtube: Integer overflow occurs at 47.
-  public static int FIBONACCI_MAX = 48;
+    // Youtube: Integer overflow occurs at 47.
+    public static int FIBONACCI_MAX = 35;
 
-  public static void Main(String[] arga)
-  {
-    Console.WriteLine("Shoutout to Brian Kernighan: Hello World!");
-
-    Console.WriteLine("Fibonacci sequence using recursion in C#:");
-    for (int i = 0; i <= FIBONACCI_MAX; i++)
+    public static void Main(String[] arga)
     {
-      Console.Write("{0} : {1}\n", i, Fibonacci(i));
-    }
-    Console.WriteLine();
-  }
+        Console.WriteLine("Shoutout to Brian Kernighan: Hello World!");
 
-  static int Fibonacci(int n)
-  {
-    if (n == 0 || n == 1)
-    {
-      return n;
+        Console.WriteLine("Fibonacci sequence using recursion in C#:");
+        for (int i = 0; i <= FIBONACCI_MAX; i++)
+        {
+            Console.Write("{0} : {1}\n", i, Fibonacci(i));
+        }
+        Console.WriteLine();
     }
 
-    return Fibonacci(n - 1) + Fibonacci(n - 2);
-  }
+    static int Fibonacci(int n)
+    {
+        if (n == 0 || n == 1)
+        {
+            return n;
+        }
+
+        return Fibonacci(n - 1) + Fibonacci(n - 2);
+    }
 }

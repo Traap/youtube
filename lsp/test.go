@@ -3,8 +3,8 @@ package main
 
 import "fmt"
 
-var FIBONACCI_MAX int = 48
-
+var FIBONACCI_MAX int = 35
+l[b]
 func fibonacci(n int) int {
 	if n <= 1 {
 		return n

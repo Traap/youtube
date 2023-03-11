@@ -1,5 +1,7 @@
 // Shout to Brian Kernagan and Fibonacci sequence done with Rust.
-fn fibonacci(n: u32) -> u32 {
+const FIBONACCI_MAX: i32 = 35;
+
+fn fibonacci(n: i32) -> i32 {
     match n {
         0 => 0,
         1 => 1,
@@ -11,7 +13,7 @@ fn main() {
     println!("Shoutout to Brian Kernighan: Hello World!");
 
     println!("Fibonacci sequence using recursion in Rust:");
-    for i in 0..48 {
+    for i in 0..FIBONACCI_MAX {
         println!("{} : {} ", i, fibonacci(i));
     }
     println!()

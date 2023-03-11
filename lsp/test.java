@@ -1,7 +1,7 @@
 // Shoutout to Brian Kernighan and Fibonacci sequence using recursion in Java.
 public class Program
 {
-  public static int FIBONACCI_MAX = 48;
+  public static int FIBONACCI_MAX = 35;
 
   public static void main(String[] arga)
   {
