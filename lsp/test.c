@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 // Youtube: Integer overflow occurs at 47.
-static int FIBONACCI_MAX = 42;
+static int FIBONACCI_MAX = 35;
 
 int fibonacci(int n) {
   if (n <= 1) {
