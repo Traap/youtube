@@ -15,14 +15,26 @@ main() {
 }
 
 # -------------------------------------------------------------------------- }}}
+# {{{ setConstants
+
+setConstants() {
+	tmuxSrc="https://GitHub.com/Traap/tmux.git"
+	tmuxDst="$GITHUB/tmux"
+
+	tmuxPluginsSrc="https://github.com/tmux-plugins/tpm.git"
+	tmuxPluginsDst="$GITHOME/tmux/plugins/tpm"
+
+	tmuxPluginsInstall="$GITHOME/tmux/plugins/tpm/bin/install_plugins"
+
+}
+
+# -------------------------------------------------------------------------- }}}
 # {{{ cloneTmuxRepos
 
 cloneTmuxRepos() {
 	say 'Cloning TMUX repositories.'
-	src=https://github.com/Traap/tmux.git
-	dst="$GITHOME/tmux"
-	rm -rf "$dst"
-	git clone "$src" "$dst"
+	rm -rf "$tmuxDst"
+	git clone "$tmuxSrc" "$tmuxDst"
 	echo ""
 }
 
@@ -31,9 +43,7 @@ cloneTmuxRepos() {
 
 cloneTmuxPlugins() {
 	say 'Cloning TMUX plugins.'
-	src=https://github.com/tmux-plugins/tpm.git
-	dst="$GITHOME"/tmux/plugins/tpm
-	git clone "$src" "$dst"
+	git clone "$tmuxPluginsSrc" "$tmuxPluginsDst"
 }
 
 # -------------------------------------------------------------------------- }}}
@@ -59,7 +69,7 @@ createSymLinks() {
 
 loadTmuxPlugins() {
 	say 'Loading TMUX plugins.'
-	~/.tmux/plugins/tpm/bin/install_plugins
+	"$tmuxPluginsInstall"
 }
 
 # -------------------------------------------------------------------------- }}}
