@@ -1,4 +1,15 @@
 #!/bin/bash
+# {{{ Define global constants.
+
+tmuxSrc="https://GitHub.com/Traap/tmux.git"
+tmuxDst="$GITHOME/tmux"
+
+tmuxPluginsSrc="https://github.com/tmux-plugins/tpm.git"
+tmuxPluginsDst="$tmuxDst/plugins/tpm"
+
+tmuxPluginsInstall="$tmuxPluginsDst/bin/install_plugins"
+
+# -------------------------------------------------------------------------- }}}
 # {{{ main
 
 main() {
@@ -10,22 +21,26 @@ main() {
 	cloneTmuxRepos
 	cloneTmuxPlugins
 
-	# Install editors and terminal multiplexers.
+	# Install TMUX plugins.
 	loadTmuxPlugins
 }
 
 # -------------------------------------------------------------------------- }}}
-# {{{ setConstants
+# {{{ deleteSymLinks
 
-setConstants() {
-	tmuxSrc="https://GitHub.com/Traap/tmux.git"
-	tmuxDst="$GITHUB/tmux"
+deleteSymLinks() {
+	echo "Deleting symbolic links."
+	rm -rfv ~/.tmux
+	rm -rfv ~/.tmux.conf
+}
 
-	tmuxPluginsSrc="https://github.com/tmux-plugins/tpm.git"
-	tmuxPluginsDst="$GITHOME/tmux/plugins/tpm"
+# -------------------------------------------------------------------------- }}}
+# {{{ createSymLinks
 
-	tmuxPluginsInstall="$GITHOME/tmux/plugins/tpm/bin/install_plugins"
-
+createSymLinks() {
+	say 'Creating symbolic links.'
+	ln -fsv "$tmuxDst" ~/.tmux
+	ln -fsv "$tmuxDst"/tmux.conf ~/.tmux.conf
 }
 
 # -------------------------------------------------------------------------- }}}
@@ -44,24 +59,6 @@ cloneTmuxRepos() {
 cloneTmuxPlugins() {
 	say 'Cloning TMUX plugins.'
 	git clone "$tmuxPluginsSrc" "$tmuxPluginsDst"
-}
-
-# -------------------------------------------------------------------------- }}}
-# {{{ deleteSymLinks
-
-deleteSymLinks() {
-	echo "Deleting symbolic links."
-	rm -rfv ~/.tmux
-	rm -rfv ~/.tmux.conf
-}
-
-# -------------------------------------------------------------------------- }}}
-# {{{ createSymLinks
-
-createSymLinks() {
-	say 'Creating symbolic links.'
-	ln -fsv ~/git/tmux ~/.tmux
-	ln -fsv ~/git/tmux/tmux.conf ~/.tmux.conf
 }
 
 # -------------------------------------------------------------------------- }}}
