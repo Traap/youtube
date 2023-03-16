@@ -1,8 +1,15 @@
 # Current Topic
   - Welcome back everyone.  I name is Traap.
+
 # Overview
   - Today I will demonstrate how you can boost your personal productivity using
     Tmux and Neovim or Vim.
+
+# TMUX Setup
+  - Plugins:
+    * [(tpm) tmux plugin manager](https://github.com/tmux-plugins/tpm.git)
+    * [My TMUX Custimizations](https://github.com/Traap/tmux)
+
 # Neovim Setup
   - Package manager:
     * [lazy.nvim](https://github.com/folke/lazy.nvim)
@@ -19,10 +26,12 @@
     * [vim-tmux-runner](https://github.com/christoomey/vim-tmux-runner)
     * [vim-bundle-tmux-runner](https://github.com/Traap/vim-bundle-tmux-runner)
     * [tmux](https://github.com/Traap/tmux)
+
 # Vim Setup
   - Package manager: [vim-plug](https://github.com/junegunn/vim-plug)
   - Plugins:
     *   Same as Neovim
+
 # Navigation demonstrating
   - Move {direction} to next: tmux split, neovim split, vim split, or wrap.
 
