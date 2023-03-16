@@ -7,7 +7,7 @@ _Posted Videos_
   - [Let's Have Some Fun](Lets Have Some Fun)
   - [Neovim Environment Hopping](NeoVim Environment Hopping)
   - [Neovim Experimental Noice plugin](experimental noice)
-  - [Neovim Update Aenda](Neovim Update Agenda)
+  - [Neovim Update Agenda](Neovim Update Agenda)
   - [Using Windows Subsystem for Linux 2 running Archlinux](Windows Subsystem for Linux 2 running Archlinux.md)
   - [Overridding LazyVim's LuaLine Defaults](Overridding LazyVim's LuaLine Defaults.md)
   - [Personal Productivity with Tmux](Personal Productivity with Tmux.md)
