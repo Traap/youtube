@@ -4,6 +4,13 @@
 # Overview
   - Today I will answer a Viewers question about WSL2 Vim/Neovim setup.
 
+# Remmina Remote Desktop Client
+  - CTRL-[ replaces ESC
+  - ESC and CAPSLOCK are swapped on ArchLinux & W11
+
+# Microsoft Windows Terminal
+  - Settings overview
+
 # Neovim Setup
   - Package manager:
     * [lazy.nvim](https://github.com/folke/lazy.nvim)
@@ -17,8 +24,8 @@
 # Vim Setup
   - Package manager: [vim-plug](https://github.com/junegunn/vim-plug)
 
-
 # Let's Do This!!!
-  * Previous Posts
+  - Previous Posts
 
   - [Videos posted](Videos Posted)
+
