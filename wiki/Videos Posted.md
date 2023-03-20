@@ -11,3 +11,4 @@ _Posted Videos_
   - [Using Windows Subsystem for Linux 2 running Archlinux](Windows Subsystem for Linux 2 running Archlinux.md)
   - [Overridding LazyVim's LuaLine Defaults](Overridding LazyVim's LuaLine Defaults.md)
   - [Personal Productivity with Tmux](Personal Productivity with Tmux.md)
+  - [Answering WSL2, tmux, nvim, and vim Viewer questions](Answering-WSL2-tmux-nvim-and-vim-Viewer-questions.md)
