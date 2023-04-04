@@ -2,7 +2,6 @@
 #include <iostream>
 using namespace std;
 
-// Youtube: Integer overflow occurs at 47.
 static int FIBONACCI_MAX = 35;
 
 class Fibonacci {

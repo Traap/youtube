@@ -1,7 +1,6 @@
 // Shoutout to Brian Kernighan and Fibonacci sequence using recursion in C.
 #include <stdio.h>
 
-// Youtube: Integer overflow occurs at 47.
 static int FIBONACCI_MAX = 35;
 
 int fibonacci(int n) {
