@@ -2,7 +2,6 @@
 class Program
 {
 
-    // Youtube: Integer overflow occurs at 47.
     public static int FIBONACCI_MAX = 35;
 
     public static void Main(String[] arga)
