@@ -11,8 +11,8 @@
   - I encourage you to what Elijah's video if you haven already.
 
 # Bootstrap, Remove, or Switch Neovim Configurations
-  - [ ] Open tmux-runner and send compand to run nvims executable script
   - [ ] Make a choice that is cloned
+  - [ ] Open tmux-runner and send compand to run nvims executable script
   - [ ] Make a choice that is deleted
   - [ ] Make a choice that is pulled
   - [ ] Make a choice that does not need to pull
