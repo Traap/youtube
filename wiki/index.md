@@ -2,22 +2,24 @@
   - Welcome back everyone.  Name is Traap.
 
 # Overview
-  - Today I will ...
+  - Today I will review and demonstrate a bash script that Bootstraps, Remove and
+    Switch Neovim configuration.
 
-# Remmina Remote Desktop Client
-  - CTRL-[ replaces ESC
-  - ESC and CAPSLOCK are swapped on ArchLinux & W11
+  - I was inspired by Elijah Manor's excellent Youtube "Neovim Config Switcher"
+    to do this work.
 
-# Neovim Setup
-  - Package manager:
-    * [lazy.nvim](https://github.com/folke/lazy.nvim)
+  - I encourage you to what Elijah's video if you haven already.
 
-  - Bootstrap:
-    * [LazyVim](https://github.com/LazyVim/LazyVim)
-
-  - Customization:
-    * [nvim.traap](https://github.com/Traap/nvim.)
-
+# Bootstrap, Remove, or Switch Neovim Configurations
+  - [ ] Open tmux-runner and send compand to run nvims executable script
+  - [ ] Make a choice that is cloned
+  - [ ] Make a choice that is deleted
+  - [ ] Make a choice that is pulled
+  - [ ] Make a choice that does not need to pull
+  - [ ] Discuss nvim_appnames
+  - [ ] Hook bvim_apnames into bashrc, aka, my_aliases
+  - [ ] Hook into sxhkd
+  - [ ] Code walk through
 
 # Let's Do This!!!
   - Previous Posts
