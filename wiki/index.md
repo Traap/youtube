@@ -11,10 +11,11 @@
   - I encourage you to what Elijah's video if you haven already.
 
 # Bootstrap, Remove, or Switch Neovim Configurations
-  - [X] Open tmux-runner and send compand to run nvims executable script
-  - [ ] Make a choice that is cloned
-  - [ ] Make a choice that is deleted
-  - [ ] Make a choice that does not need to pull
+  Youtube: Cover these items.
+  - [X] Make a choice that is cloned
+  - [X] Make a choice that is deleted
+  - [X] Make a choice that does not need to pull
+  - [X] Make a choice that is invalid
   - [ ] Discuss nvim_appnames
   - [ ] Hook bvim_apnames into bashrc, aka, my_aliases
   - [ ] Hook into sxhkd
