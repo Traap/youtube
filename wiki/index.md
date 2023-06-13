@@ -2,25 +2,16 @@
   - Welcome back everyone.  Name is Traap.
 
 # Overview
-  - Today I will review and demonstrate a bash script that Bootstraps, Remove and
-    Switch Neovim configuration.
+  - Today I will demonstrate 'How To Lazy Load Harpoon' with LazyVim.
 
-  - I was inspired by Elijah Manor's excellent Youtube "Neovim Config Switcher"
-    to do this work.
+  - [Harpoon](https://github.com/theprimeagen/harpoon) is well documented and easy to install.
 
-  - I encourage you to what Elijah's video if you haven already.
+  - [Installation](https://github.com/ThePrimeagen/init.lua/tree/master/after/plugin) with Vim's after pluin.
 
-# Bootstrap, Remove, or Switch Neovim Configurations
-  Youtube: Cover these items.
-  - [X] Make a choice that is cloned
-  - [X] Make a choice that is deleted
-  - [X] Make a choice that does not need to pull
-  - [X] Make a choice that is invalid
-  - [ ] Discuss nvim_appnames
-  - [ ] Hook bvim_apnames into bashrc, aka, my_aliases
-  - [ ] Hook into sxhkd
+# Demonstrate Harpoon and Personal Customization
+  - [ ] Enable plugin
+  - [ ] Lazy load with key stroke event
   - [ ] Code walk through
-  - [ ] Make a choice that is pulled
 
 # Let's Do This!!!
   - Previous Posts
