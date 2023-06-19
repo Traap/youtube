@@ -13,3 +13,4 @@ _Posted Videos_
   - [Personal Productivity with Tmux](Personal Productivity with Tmux.md)
   - [Answering WSL2, tmux, nvim, and vim Viewer questions](Answering-WSL2-tmux-nvim-and-vim-Viewer-questions.md)
   - [Neovim Switch (nvim)](neovim-switcher)
+  - [Lazy Load Harpoon](Lazy Load Harpoon.md)

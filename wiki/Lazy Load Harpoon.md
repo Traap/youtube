@@ -13,8 +13,3 @@
   - [ ] Lazy load with key stroke event
   - [ ] Code walk through
 
-# Let's Do This!!!
-  - Previous Posts
-
-  - [Videos posted](Videos Posted)
-
