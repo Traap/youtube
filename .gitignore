@@ -3,6 +3,7 @@ target/
 sysofsys/
 bin/
 obj/
+printed/
 node_modules/
 package-lock.json
 package.json
