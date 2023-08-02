@@ -8,13 +8,14 @@
   - Bash shell
   - Neovim
   - nvims - #22 Multiple Neovims? Config, Use & Delete them Safely!
+  - Ripgrep
   - Tmux
 
 # Barebones LazyVim Demonstration
+  - TMUX tricks
   - Use nvims to install barebones
   - Use nvim-barbones to start neovim
   - Code walk through
-  - TMUX tricks
 
 # Let's Do This!!!
   - Previous Posts
