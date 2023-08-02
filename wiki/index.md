@@ -2,23 +2,20 @@
   - Welcome back everyone.  Name is Traap.
 
 # Today's Topic
-  - Today I will demonstrate a 'Barebones LazyVim' configurations.
+  - Today I will demonstrate How I personalize LazyVim.
 
 # The following tools are used
   - Bash shell
   - Neovim
-  - nvims - #22 Multiple Neovims? Config, Use & Delete them Safely!
-  - Ripgrep
+  - Ranger
   - Tmux
   - BSPWM tiling window manager
 
-# Barebones LazyVim Demonstration
-  - BSPWM & TMUX tricks
-  - Use nvims to install barebones
-  - Use nvim-barbones to start neovim
-  - Code walk through
+# LazyVim personalization
+  - lua/config/ overview
+  - lua/config/traap is where my custom configuration resides
+  - lua/plugins
 
 # Let's Do This!!!
-  - Previous Posts
-- [Videos posted](Videos Posted)
+  - [Videos posted](Videos Posted)
 

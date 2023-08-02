@@ -14,3 +14,4 @@ _Posted Videos_
   - [Answering WSL2, tmux, nvim, and vim Viewer questions](Answering-WSL2-tmux-nvim-and-vim-Viewer-questions.md)
   - [Neovim Switch (nvim)](neovim-switcher)
   - [Lazy Load Harpoon](Lazy Load Harpoon.md)
+  - [Barebones LazyVim](Barebones LazyVim.md)
