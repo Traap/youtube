@@ -1,7 +1,7 @@
-# Current Topic
+# Greeting
   - Welcome back everyone.  Name is Traap.
 
-# Overview
+# Today's Topic
   - Today I will demonstrate a 'Barebones LazyVim' configurations.
 
 # The following tools are used
