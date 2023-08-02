@@ -2,19 +2,22 @@
   - Welcome back everyone.  Name is Traap.
 
 # Overview
-  - Today I will demonstrate 'How To Lazy Load Harpoon' with LazyVim.
+  - Today I will demonstrate a 'Barebones LazyVim' configurations.
 
-  - [Harpoon](https://github.com/theprimeagen/harpoon) is well documented and easy to install.
-    Installation
-  - [Installation](https://github.com/ThePrimeagen/init.lua/tree/master/after/plugin) with Vim's after plugin.
+# The following tools are used
+  - Bash shell
+  - Neovim
+  - nvims - #22 Multiple Neovims? Config, Use & Delete them Safely!
+  - Tmux
 
-# Demonstrate Harpoon and Personal Customization
-  - [ ] Enable plugin
-  - [ ] Lazy load with key stroke event
-  - [ ] Code walk through
+# Barebones LazyVim Demonstration
+  - Use nvims to install barebones
+  - Use nvim-barbones to start neovim
+  - Code walk through
+  - TMUX tricks
 
 # Let's Do This!!!
   - Previous Posts
+- [Videos posted](Videos Posted)
 
-  - [Videos posted](Videos Posted)
 
