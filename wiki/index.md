@@ -10,9 +10,10 @@
   - nvims - #22 Multiple Neovims? Config, Use & Delete them Safely!
   - Ripgrep
   - Tmux
+  - BSPWM tiling window manager
 
 # Barebones LazyVim Demonstration
-  - TMUX tricks
+  - BSPWM & TMUX tricks
   - Use nvims to install barebones
   - Use nvim-barbones to start neovim
   - Code walk through
