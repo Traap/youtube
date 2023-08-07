@@ -33,7 +33,7 @@ M = {
 
   standard_comparison = {
     equal_to = "==",
-    not_equal = "==",
+    not_equal = "!=",
   },
 
   extended_comparison = {
