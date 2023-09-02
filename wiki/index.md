@@ -2,20 +2,32 @@
   - Welcome back everyone.  Name is Traap.
 
 # Today's Topic
-  - Today I will demonstrate How I personalize LazyVim.
+  - Today I will demonstrate How I setup a new toggled Tmux session
 
 # The following tools are used
-  - Bash shell
-  - Neovim
-  - Ranger
-  - Tmux
   - BSPWM tiling window manager
+  - Bash shell
+  - Harpoon
+  - Neovim
+  - Telescope
+  - Tmux
+  - Wiki.vim
+  - alacrity
+  - ao
+  - fugitive
+  - sxhkd
+  - todo-comments
+  - toggler
 
-# LazyVim personalization
-  - lua/config/ overview
-  - lua/config/traap is where my custom configuration resides
-  - lua/plugins
+# Cut and Paste Code Area
+## Add to sxhkdrc
+    notify-send 'Neovim' 'Neovim session toggled.'; \
+      toggler Nvim, \
+
+## Add do toggler
+    "Nvim") toggle_winclass "$1" "$GITHOME/nvim.trap" ;;
+
+## Discuss ao changes.
 
 # Let's Do This!!!
   - [Videos posted](Videos Posted)
-
