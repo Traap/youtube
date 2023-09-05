@@ -15,3 +15,4 @@ _Posted Videos_
   - [Neovim Switch (nvim)](neovim-switcher)
   - [Lazy Load Harpoon](Lazy Load Harpoon.md)
   - [Barebones LazyVim](Barebones LazyVim.md)
+  - [How I Personalize Neovim](How I Personalize Neovim.md)
