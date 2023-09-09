@@ -27,7 +27,7 @@
   - Alt-N starts a TMUX session named Neovim.
   - lua/config/ overview
   - lua/config/traap is where my custom configuration resides
-  - lua/plugins
+  - [lua/plugins](lua/plugins.md)
 
 # Let's Do This!!!
   - [Videos posted](Videos Posted)
