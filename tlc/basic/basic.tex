@@ -1,0 +1,56 @@
+% Shoutouts
+% http://math.gillesgnacadja.info/:
+% https://github.com/lervag
+
+% https://github.com/lervag/vimtex
+% https://github.com/lervag/vimtex/blob/master/doc/vimtex.txt
+
+% https://github.com/lervag/wiki.vim
+% https://github.com/lervag/wiki.vim/blob/master/doc/wiki.txt
+%
+% https://github.com/Traap/tlc-article/blob/master/tlc-article.cls
+% YouTube: Step 1: Use document class article to create a basic LaTeX document.
+% YouTube: Step 2: Rename article to tlc-tlc-article and uncomment clode.
+% YouTube: Step 3: Add data/version.csv
+
+\documentclass[12pt]{tlc-article}
+
+\begin{document}
+% YouTube: Step 4: Use tlcTitlePageAndTableOfContents
+\tlcTitlePageAndTableOfContents{Basic \LaTeX\  Document}{Traap}{
+  tlc-article exposes a command named tlcTitlePageAndTableOfContents to
+  orchestrate  document layout. This \LaTeX\  document demonstrates layout
+  design tlc-article uses in concert with facncyhdr to layout the first page
+  with a document title, document author, document date, and document abstract
+  with the headers and footers being empty.  Page two begins a consistent design
+  the document header and document footer as well as the table of contents.
+  Page three begins document content.
+}
+
+% YouTube: Step 4: Comment this line out.
+% A \LaTeX\ document based on document class article.
+
+% Youtube: Step 5: Uncomment this block.
+
+\section{Intruduction}\label{sec:introduction}
+A \LaTeX\  \nameref{sec:introduction} section using document class tlc-article.
+
+\subsection{purpose}\label{sec:purpose}
+A \LaTeX\  \nameref{sec:purpose} section using document class tlc-article.
+
+\subsubsection{audience}\label{sec:audience}
+A \LaTeX\  \nameref{sec:audience} section using document class tlc-article.
+
+\section{Body}\label{sec:body}
+
+A \LaTeX\  \nameref{sec:body} section using document class tlc-article.
+\section{Conclusion}\label{sec:conclusion}
+A \LaTeX\  \nameref{sec:conclusion} section using document class tlc-article.
+
+% YouTube: Step 5: Enable debug
+
+% tlcDebug must be the last line in your document to ensure all definitions and
+% macros are fully expanded.
+\tlcDebug
+
+\end{document}
