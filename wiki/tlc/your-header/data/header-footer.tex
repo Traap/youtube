@@ -1,0 +1,23 @@
+% Header
+\renewcommand{\headrule}{\vbox to 0pt{
+    \makebox[\headwidth]{\color{red}\hrulefill}\vss
+  }
+}
+
+\renewcommand{\headrulewidth}{1.0pt}
+\fancyhead[L]{\tlc@institution}
+\fancyhead[C]{\tlc@permission}
+\fancyhead[R]{\tiny{Page \thepage~of~\pageref{LastPage}}}
+
+% footer
+\renewcommand{\footrule}{\vbox to 0pt{
+    \makebox[\headwidth]{\color{green}\hrulefill}\vss
+  }
+}
+
+\renewcommand{\footrulewidth}{1.0pt}
+% \setlength\headheight{30.0pt}
+\fancyfoot[L]{\tiny \tlc@status \\ \tlc@date \\ \tlc@version}%
+\fancyfoot[C]{\thetitle}
+% \fancyfoot[R]{\includegraphics[width=3cm,height=1cm]{\tlc@logoFile}}
+\fancyfoot[R]{\includegraphics{\tlc@logoFile}}

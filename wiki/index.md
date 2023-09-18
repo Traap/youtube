@@ -2,32 +2,28 @@
   - Welcome back everyone.  Name is Traap.
 
 # Today's Topic
-  - Today I will demonstrate a workflow launching and toggling tmux sessions.
+  - Today I will review a LaTeX document tlc-article.
 
-# Tmux Sessions
-  - Alt-S starts a TMUX session named Scratchpad
-  - Alt-W starts a TMUX session named Wiki
-  - Alt-Y starts a TMUX session named YouTube
+# Shout Outs
+  - [Gilles Gnacadja, PhD](http://math.gillesgnacadja.info/)
+  - [Karl Yngve Lervåg, PhD](https://github.com/lervag)
 
-# Steps to add a new keybound TMUX workflow
-  - [bspwm](https://github.com/baskerville/bspwm)
-    A tiling window manager that represents windows as leaves of a full binary
-    tree.
+# Tools I am using
+  - [wiki.vim](https://github.com/lervag/wiki.vim)
+  - [wiki.vim document](https://github.com/lervag/wiki.vim/blob/master/doc/wiki.txt)
 
-  - [sxhkd](https://github.com/baskerville/sxhkd)
-    A X daemon that reacts to inputs invents by executing commands.
+  - [vimtex](https://github.com/lervag/vimtex)
+  - [vimtex document](https://github.com/lervag/vimtex/blob/master/doc/vimtex.txt)
 
-  - [toggler](https://github.com/Traap/dotfiles/blob/master/bash/bin/toggler)
-    A bash script used to create an alacrity class, toggle it on and off.
+  - [LaTeX - A document preparation system](https://www.latex-project.org/)
 
-  - [ao](https://github.com/Traap/dotfiles/blob/master/bash/bin/ao)
-    A bash script use to create TMUX sessions, windows, and run commands.
+  - [Okular - The Universal Document Viewer](https://okular.kde.org/)
 
-# Next Video LazyVim personalization
-  - Alt-N starts a TMUX session named Neovim.
-  - lua/config/ overview
-  - lua/config/traap is where my custom configuration resides
-  - [lua/plugins](lua/plugins.md)
+  - [Traap's LaTeX Class](https://github.com/Traap/tlc-article/blob/master/tlc-article.cls)
+
+# LaTeX documents
+  - [Basic](tlc/basic/basic.tex)
+  - [Your Header](tlc/your-header/your-header.tex)
 
 # Let's Do This!!!
   - [Videos posted](Videos Posted)

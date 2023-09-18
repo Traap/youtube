@@ -1,14 +1,4 @@
 % Shoutouts
-% http://math.gillesgnacadja.info/:
-% https://github.com/lervag
-
-% https://github.com/lervag/vimtex
-% https://github.com/lervag/vimtex/blob/master/doc/vimtex.txt
-
-% https://github.com/lervag/wiki.vim
-% https://github.com/lervag/wiki.vim/blob/master/doc/wiki.txt
-%
-% https://github.com/Traap/tlc-article/blob/master/tlc-article.cls
 % YouTube: Step 1: Use document class article to create a basic LaTeX document.
 % YouTube: Step 2: Rename article to tlc-tlc-article and uncomment clode.
 % YouTube: Step 3: Add data/version.csv
@@ -16,7 +6,11 @@
 \documentclass[12pt]{tlc-article}
 
 \begin{document}
-% YouTube: Step 4: Use tlcTitlePageAndTableOfContents
+% YouTube: Step 4: Comment this line out.
+% A \LaTeX\ document based on document class article.
+
+% YouTube: Step 4: Uncomment this block.
+
 \tlcTitlePageAndTableOfContents{Basic \LaTeX\  Document}{Traap}{
   tlc-article exposes a command named tlcTitlePageAndTableOfContents to
   orchestrate  document layout. This \LaTeX\  document demonstrates layout
@@ -26,9 +20,6 @@
   the document header and document footer as well as the table of contents.
   Page three begins document content.
 }
-
-% YouTube: Step 4: Comment this line out.
-% A \LaTeX\ document based on document class article.
 
 % Youtube: Step 5: Uncomment this block.
 
@@ -47,10 +38,10 @@ A \LaTeX\  \nameref{sec:body} section using document class tlc-article.
 \section{Conclusion}\label{sec:conclusion}
 A \LaTeX\  \nameref{sec:conclusion} section using document class tlc-article.
 
-% YouTube: Step 5: Enable debug
+% YouTube: Step 6: Enable debug
 
 % tlcDebug must be the last line in your document to ensure all definitions and
 % macros are fully expanded.
-\tlcDebug
+% \tlcDebug
 
 \end{document}
