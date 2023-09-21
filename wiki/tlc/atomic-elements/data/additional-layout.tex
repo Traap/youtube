@@ -1,0 +1,176 @@
+% {{{ This file defines atomic elements.
+
+\def\aeFile{data/elements.csv}
+
+% -------------------------------------------------------------------------- }}}
+% {{{ Define column na {\aeFile}mes used by csvreader for atomic elements.
+
+\csvnames{aeNames}{
+    1=\aeAn
+   ,2=\aeSy
+   ,3=\aeNm
+   ,4=\aeAm
+   ,5=\aeHc
+   ,6=\aeEg
+   ,7=\aeAr
+   ,8=\aeIe
+   ,9=\aeEa
+  ,10=\aeSs
+  ,11=\aeMp
+  ,12=\aeBp
+  ,13=\aeDe
+  ,14=\aeGb
+  ,15=\aeYD
+}
+
+% -------------------------------------------------------------------------- }}}
+% {{{ Define a table style that is used to list all atomic elements .
+
+\csvstyle{aeStyle}{
+  longtable=|C{1.5cm}|C{1.8cm}|L{3.0cm}|L{3.0cm}|L{2.5cm}|
+  ,respect all
+  ,column count=5
+  ,table head=\hline
+      Atomic Number
+    & Symbol
+    & Name
+    & SS
+    & Hex Color
+    \\\hline\hline\endhead
+  ,late after line=\\\hline
+  ,aeNames
+}
+
+% -------------------------------------------------------------------------- }}}
+% {{{ Extract one row from a csv file.
+%     Arguments
+%       #1 the atomic number to extract
+%       #2 is the column name of the value to extract.
+
+\newcommand{\aePart}[2]{%
+  \IfFileExists{\aeFile}{%
+    \csvreader
+      [respect all%
+      ,column count=15%
+      ,separator=pipe%
+      ,filter equal={\aeAtomicNumber}{#1}%
+      ]%
+    {\aeFile}%
+    {\global\edef\gAtomicNumber{\aeAtomicNumber}#2}%
+    {%
+      \aeAn
+      &\aeSy
+      &\aeNm
+      &\aeAm
+      &\aeHc
+      &\aeEg
+      &\aeAr
+      &\aeIe
+      &\aeEa
+      &\aeSs
+      &\aeMp
+      &\aeBp
+      &\aeDe
+      &\aeGb
+      &\aeYD
+    }%
+  }%
+  {% Else
+    aeFile [\aeFile] does not exist.
+  }%
+}%
+
+% -------------------------------------------------------------------------- }}}
+% {{{ This function lists all atomic elements
+
+\newcommand{\aeList}{%
+  \IfFileExists{\aeFile}{%
+    \csvreader
+      [aeStyle%
+      ,respect all%
+      ,separator=pipe%
+      ]%
+    {\aeFile}
+    {}
+    {
+       \aeAn
+      &\aeSy
+      &\aeNm
+      &\aeSs
+      &\aeHc
+    }%
+  }%
+  {% Else
+     aeFile [\aeFile] does not exist.
+  }%
+}%
+
+% -------------------------------------------------------------------------- }}}
+% {{{ Define a table style that is used to list atmoc elements hex colors.
+
+\csvstyle{aeHexColorStyle}{
+  longtable=|C{1.5cm}|C{1.8cm}|L{3.0cm}|L{3.0cm}|L{2.5cm}|
+  ,respect all
+  ,column count=5
+  ,table head=\hline
+      Atomic Number
+    & Symbol
+    & Name
+    & SS
+    & Hex Color
+    \\\hline\hline\endhead
+  ,late after line=\\\hline
+  ,aeNames
+}
+
+% -------------------------------------------------------------------------- }}}
+% {{{ This function selects all records in the atomic element file that match
+% {{{ These are helper definitions that are used to extract an individual column
+%     attribute from the atomic elements file
+
+\def\getAn{ \aePart {\aeKey} {\aeAn}}
+\def\getSy{ \aePart {\aeKey} {\aeSy}}
+\def\getNm{ \aePart {\aeKey} {\aeNm}}
+\def\getAm{ \aePart {\aeKey} {\aeAm}}
+\def\getHc{ \aePart {\aeKey} {\aeHc}}
+\def\getEc{ \aePart {\aeKey} {\aeEc}}
+\def\getEg{ \aePart {\aeKey} {\aeEg}}
+\def\getAr{ \aePart {\aeKey} {\aeAr}}
+\def\getIe{ \aePart {\aeKey} {\aeIe}}
+\def\getEa{ \aePart {\aeKey} {\aeEa}}
+\def\getOs{ \aePart {\aeKey} {\aeOs}}
+\def\getSs{ \aePart {\aeKey} {\aeSs}}
+\def\getMp{ \aePart {\aeKey} {\aeMp}}
+\def\getBp{ \aePart {\aeKey} {\aeBp}}
+\def\getDe{ \aePart {\aeKey} {\aeDe}}
+\def\getGb{ \aePart {\aeKey} {\aeGb}}
+\def\getYD{ \aePart {\aeKey} {\aeYD}}
+
+% -------------------------------------------------------------------------- }}}
+% aenSs
+%     Parameter 1 - Active | Closed | New | Parley.
+
+\newcommand{\aeListHexColors}[1]{%
+  \IfFileExists{\aeFile}{%
+    \csvreader
+      [aeHexColorStyle%
+      ,respect all%
+      ,separator=pipe%
+      ,filter equal={\aeSs}{#1}%
+      ]%
+    {\aeFile}
+    {}
+    {
+       \aeAn
+      &\aeSy
+      &\aeNm
+      &\aeSs
+      &\aeHc
+    }%
+  }%
+  {% Else
+     aeFile [\aeFile] does not exist.
+  }%
+}%
+
+% -------------------------------------------------------------------------- }}}

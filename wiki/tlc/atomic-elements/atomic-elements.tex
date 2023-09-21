@@ -1,0 +1,26 @@
+\documentclass[12pt]{tlc-article}
+\begin{document}
+
+\tlcTitlePageAndTableOfContents{Your Header \LaTeX\  Document}{Traap}{
+  This \LaTeX\ document uses tlc-article's default header and footer, version
+  file to supply information to the defalt header and footer, and will use a
+  tlc-article hook to add additional layout.  All \LaTeX\ entered into
+  data/additional-layout.text is part of the \LaTeX\  preamble.
+}
+
+\section{Introduction}\label{sec:introduction}
+A \LaTeX\  \nameref{sec:introduction} section using document class tlc-article.
+
+\section{Body}\label{sec:body}
+A \LaTeX\  \nameref{sec:body} section using document class tlc-article.
+
+\clearpage
+\section{Atomic Elements List}\label{sec:atomic01}
+\aeList
+
+% \section{Atomic Elements Hex Colors}\label{sec:atomic02}
+% \aeListHexColors{Gas}
+
+% Use \tlcDebug to write variables you can customzie to your document.
+% \tlcDebug
+\end{document}

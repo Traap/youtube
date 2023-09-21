@@ -24,6 +24,7 @@
 # LaTeX documents
   - [Basic](tlc/basic/basic.tex)
   - [Your Header](tlc/your-header/your-header.tex)
+  - [Additional Layout](tlc/additional-layout/additional-layout.tex)
 
 # Let's Do This!!!
   - [Videos posted](Videos Posted)
