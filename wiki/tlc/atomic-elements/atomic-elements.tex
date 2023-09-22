@@ -14,13 +14,66 @@ A \LaTeX\  \nameref{sec:introduction} section using document class tlc-article.
 \section{Body}\label{sec:body}
 A \LaTeX\  \nameref{sec:body} section using document class tlc-article.
 
-\clearpage
-\section{Atomic Elements List}\label{sec:atomic01}
-\aeList
+\subsection{Hydrogen}
+The name of Atomic number \getAn{1} is \getNm{1} whose symbol is
+\getSy{1} with an atomic mass \getAm{1}.  \getNm{1} was
+discovered in \getYd{1}.
 
-% \section{Atomic Elements Hex Colors}\label{sec:atomic02}
-% \aeListHexColors{Gas}
+\subsection{Get Atomic Element Piece Parts}
+\getAn{11}\
+\getSy{11}\
+\getNm{11}\
+\getHc{11}\
+\getEg{11}\
+\getAr{11}\
+\getIe{11}\
+\getEa{11}\
+\getSs{11}\
+\getMp{11}\
+\getBp{11}\
+\getDe{11}\
+\getGb{11}\
+\getYd{11}\
+
+\section{Atomic Elements List}\label{sec:atomic01}
+\aeYearDiscovered
+
+\section{Atomic Elements Hex Colors}\label{sec:atomic02}
+\subsection{Gas}
+\aeListHexColors{Gas}
+
+\subsection{Liquid}
+\aeListHexColors{Liquid}
+
+\subsection{Solid}
+\aeListHexColors{Solid}
+
+\section{Atomic Elements General List}\label{sec:aelist01}
+\subsection{Example 1}
+\aeGeneralList{\aeAn & \aeSy & \aeNm & \aeAm & \aeDe}
+
+\section{Atomic Elements List}\label{sec:aelist02}
+\subsection{Example 1: Gas \& Hex Color}
+\aeList
+  {aeHexColorStyle}
+  {\aeSs}{Gas}
+  {\aeAn & \aeSy & \aeNm & \aeSs & \aeHc}
+
+\subsection{Example 2: Gas \& Year Discovered}
+\aeList
+  {aeYearDiscoveredStyle}
+  {\aeSs}{Gas}
+  {\aeAn & \aeSy & \aeNm & \aeSs & \aeYd}
+
+\subsection{Example 3: Liqud \& Atomic Data}
+
+\begin{tiny}
+  \aeList
+    {aeAtomicDataStyle}
+    {\aeSs}{Liquid}
+    {\aeAn & \aeSy & \aeNm & \aeAr & \aeMp & \aeBp & \aeDe}
+\end{tiny}
 
 % Use \tlcDebug to write variables you can customzie to your document.
-% \tlcDebug
+\tlcDebug
 \end{document}

@@ -1,32 +1,60 @@
+% {{{ simpledsv-l3 notes
+
+% \csvreader[options]{file name}{assignments}{command list}
+% \csvreader
+%
+%   options
+%   [tabular = |r|l|l|
+%   ,table head = \hline
+%   ,table foot = \hline
+%   ]
+%
+%  file name
+%  {grade.csv}
+%
+%  assignments
+%  {name=\name
+%  ,givenname=\first-name
+%  ,grade=\grade
+%  }
+%
+%  command list
+%  { \grade
+%   &\firstname\~\name
+%   &\csvcoliii
+%  }
+%
+% -------------------------------------------------------------------------- }}}
 % {{{ This file defines atomic elements.
 
 \def\aeFile{data/elements.csv}
 
 % -------------------------------------------------------------------------- }}}
-% {{{ Define column na {\aeFile}mes used by csvreader for atomic elements.
+% {{{ Use the ordinal position to define the column name.
 
-\csvnames{aeNames}{
-    1=\aeAn
-   ,2=\aeSy
-   ,3=\aeNm
-   ,4=\aeAm
-   ,5=\aeHc
-   ,6=\aeEg
-   ,7=\aeAr
-   ,8=\aeIe
-   ,9=\aeEa
-  ,10=\aeSs
-  ,11=\aeMp
-  ,12=\aeBp
-  ,13=\aeDe
-  ,14=\aeGb
-  ,15=\aeYD
+\csvnames{aeNames}
+{1=\aeAn % Atomic Number
+,2=\aeSy % Symbol
+,3=\aeNm % Name
+,4=\aeAm % Atomic Mass
+,5=\aeHc % CPK Hex Color
+,6=\aeEg % Electrone gativity
+,7=\aeAr % Atomic Radius
+,8=\aeIe % Ionization Energy
+,9=\aeEa % Electron Affinity
+,10=\aeSs % Standard State
+,11=\aeMp % Melting Point
+,12=\aeBp % Boiling Point
+,13=\aeDe % Density
+,14=\aeGb % Group Block
+,15=\aeYd % Year Discovered
 }
 
 % -------------------------------------------------------------------------- }}}
-% {{{ Define a table style that is used to list all atomic elements .
+% {{{ Define a table style that is used to list the Atomic Hex Color.
 
-\csvstyle{aeStyle}{
+\csvstyle{aeHexColorStyle}
+{
   longtable=|C{1.5cm}|C{1.8cm}|L{3.0cm}|L{3.0cm}|L{2.5cm}|
   ,respect all
   ,column count=5
@@ -34,7 +62,7 @@
       Atomic Number
     & Symbol
     & Name
-    & SS
+    & Std State
     & Hex Color
     \\\hline\hline\endhead
   ,late after line=\\\hline
@@ -42,51 +70,52 @@
 }
 
 % -------------------------------------------------------------------------- }}}
-% {{{ Extract one row from a csv file.
-%     Arguments
-%       #1 the atomic number to extract
-%       #2 is the column name of the value to extract.
+% {{{ Define a table style that is used to list the Year Discovered.
 
-\newcommand{\aePart}[2]{%
-  \IfFileExists{\aeFile}{%
-    \csvreader
-      [respect all%
-      ,column count=15%
-      ,separator=pipe%
-      ,filter equal={\aeAtomicNumber}{#1}%
-      ]%
-    {\aeFile}%
-    {\global\edef\gAtomicNumber{\aeAtomicNumber}#2}%
-    {%
-      \aeAn
-      &\aeSy
-      &\aeNm
-      &\aeAm
-      &\aeHc
-      &\aeEg
-      &\aeAr
-      &\aeIe
-      &\aeEa
-      &\aeSs
-      &\aeMp
-      &\aeBp
-      &\aeDe
-      &\aeGb
-      &\aeYD
-    }%
-  }%
-  {% Else
-    aeFile [\aeFile] does not exist.
-  }%
-}%
+\csvstyle{aeYearDiscoveredStyle}
+{
+  longtable=|C{1.5cm}|C{1.5cm}|L{3.0cm}|L{1.5cm}|L{1.6cm}|
+  ,respect all
+  ,column count=5
+  ,table head=\hline
+      Atomic Number
+    & Symbol
+    & Name
+    & Std State
+    & Year Discovered
+    \\\hline\hline\endhead
+  ,late after line=\\\hline
+  ,aeNames
+}
 
 % -------------------------------------------------------------------------- }}}
-% {{{ This function lists all atomic elements
+% {{{ Define a table style that is used to list boiling points, etc.
 
-\newcommand{\aeList}{%
+\csvstyle{aeAtomicDataStyle}
+{
+  longtable=|C{1.5cm}|C{1.5cm}|L{3.0cm}|L{1.5cm}|L{1.6cm}|L{1.6cm}|L{1.5cm}|
+  ,respect all
+  ,column count=5
+  ,table head=\hline
+      Atomic Number
+    & Symbol
+    & Name
+    & Atomic Radius
+    & Melting Point
+    & Boiling Point
+    & Density
+    \\\hline\hline\endhead
+  ,late after line=\\\hline
+  ,aeNames
+}
+
+% -------------------------------------------------------------------------- }}}
+% {{{ List the Year an Atomic Element was discovered.
+
+\newcommand{\aeYearDiscovered}{%
   \IfFileExists{\aeFile}{%
     \csvreader
-      [aeStyle%
+      [aeYearDiscoveredStyle%
       ,respect all%
       ,separator=pipe%
       ]%
@@ -97,7 +126,7 @@
       &\aeSy
       &\aeNm
       &\aeSs
-      &\aeHc
+      &\aeYd
     }%
   }%
   {% Else
@@ -106,49 +135,8 @@
 }%
 
 % -------------------------------------------------------------------------- }}}
-% {{{ Define a table style that is used to list atmoc elements hex colors.
-
-\csvstyle{aeHexColorStyle}{
-  longtable=|C{1.5cm}|C{1.8cm}|L{3.0cm}|L{3.0cm}|L{2.5cm}|
-  ,respect all
-  ,column count=5
-  ,table head=\hline
-      Atomic Number
-    & Symbol
-    & Name
-    & SS
-    & Hex Color
-    \\\hline\hline\endhead
-  ,late after line=\\\hline
-  ,aeNames
-}
-
-% -------------------------------------------------------------------------- }}}
-% {{{ This function selects all records in the atomic element file that match
-% {{{ These are helper definitions that are used to extract an individual column
-%     attribute from the atomic elements file
-
-\def\getAn{ \aePart {\aeKey} {\aeAn}}
-\def\getSy{ \aePart {\aeKey} {\aeSy}}
-\def\getNm{ \aePart {\aeKey} {\aeNm}}
-\def\getAm{ \aePart {\aeKey} {\aeAm}}
-\def\getHc{ \aePart {\aeKey} {\aeHc}}
-\def\getEc{ \aePart {\aeKey} {\aeEc}}
-\def\getEg{ \aePart {\aeKey} {\aeEg}}
-\def\getAr{ \aePart {\aeKey} {\aeAr}}
-\def\getIe{ \aePart {\aeKey} {\aeIe}}
-\def\getEa{ \aePart {\aeKey} {\aeEa}}
-\def\getOs{ \aePart {\aeKey} {\aeOs}}
-\def\getSs{ \aePart {\aeKey} {\aeSs}}
-\def\getMp{ \aePart {\aeKey} {\aeMp}}
-\def\getBp{ \aePart {\aeKey} {\aeBp}}
-\def\getDe{ \aePart {\aeKey} {\aeDe}}
-\def\getGb{ \aePart {\aeKey} {\aeGb}}
-\def\getYD{ \aePart {\aeKey} {\aeYD}}
-
-% -------------------------------------------------------------------------- }}}
-% aenSs
-%     Parameter 1 - Active | Closed | New | Parley.
+% {{{ List the CPK Hex Color for an Atomic Element.
+%     Parameter 1 = [Gas | Liquid | State]
 
 \newcommand{\aeListHexColors}[1]{%
   \IfFileExists{\aeFile}{%
@@ -170,6 +158,94 @@
   }%
   {% Else
      aeFile [\aeFile] does not exist.
+  }%
+}%
+
+% -------------------------------------------------------------------------- }}}
+% {{{ Atomic Element general list.
+%     argument 1: user provided column names to list
+
+\newcommand{\aeGeneralList}[1]{%
+  \IfFileExists{\aeFile}{%
+    \csvreader
+      [aeYearDiscoveredStyle%
+      ,respect all%
+      ,separator=pipe%
+      ]%
+    {\aeFile}
+    {}
+    {#1}%
+  }%
+  {% Else
+     aeFile [\aeFile] does not exist.
+  }%
+}%
+
+% -------------------------------------------------------------------------- }}}
+% {{{ Atomic Element list.
+%     arguments
+%     1: csvstyle
+%     2: column name
+%     3: column value
+%     4: columnscsvcol
+
+\newcommand{\aeList}[4]{%
+  \IfFileExists{\aeFile}{%
+    \csvreader
+      [#1%
+      ,filter equal={#2}{#3}%
+      ,respect all%
+      ,separator=pipe%
+      ]%
+    {\aeFile}
+    {}
+    {#4}%
+  }%
+  {% Else
+     aeFile [\aeFile] does not exist.
+  }%
+}%
+
+% -------------------------------------------------------------------------- }}}
+% {{{ These are helper definitions that are used to extract an individual column
+%     attribute from the atomic elements file
+
+\newcommand{\getAn}[1]{ \aePart{#1} {\aeAn} }
+\newcommand{\getSy}[1]{ \aePart{#1} {\aeSy} }
+\newcommand{\getNm}[1]{ \aePart{#1} {\aeNm} }
+\newcommand{\getAm}[1]{ \aePart{#1} {\aeAm} }
+\newcommand{\getHc}[1]{ \aePart{#1} {\aeHc} }
+\newcommand{\getEg}[1]{ \aePart{#1} {\aeEg} }
+\newcommand{\getAr}[1]{ \aePart{#1} {\aeAr} }
+\newcommand{\getIe}[1]{ \aePart{#1} {\aeIe} }
+\newcommand{\getEa}[1]{ \aePart{#1} {\aeEa} }
+\newcommand{\getSs}[1]{ \aePart{#1} {\aeSs} }
+\newcommand{\getMp}[1]{ \aePart{#1} {\aeMp} }
+\newcommand{\getBp}[1]{ \aePart{#1} {\aeBp} }
+\newcommand{\getDe}[1]{ \aePart{#1} {\aeDe} }
+\newcommand{\getGb}[1]{ \aePart{#1} {\aeGb} }
+\newcommand{\getYd}[1]{ \aePart{#1} {\aeYd} }
+
+% -------------------------------------------------------------------------- }}}
+% {{{ Extract one column from one rown from a csv file.
+%     Arguments
+%       #1 the atomic number to extract
+%       #2 is the column name of the value to extract.
+
+\newcommand{\aePart}[2]{%
+  \IfFileExists{\aeFile}{%
+    \csvreader
+      [aeNames
+      ,respect all%
+      ,filter equal={\aeAn}{#1}%
+      ,separator=pipe%
+      ]%
+    {\aeFile}%
+    {}%
+    {#2}%
+  }%
+  {% Else
+    aeFile [\aeFile] does not exist.
   }%
 }%
 
