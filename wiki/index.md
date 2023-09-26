@@ -32,5 +32,10 @@
   - [Atomic Elements (Additional Layout)](tlc/atomic-elements/atomic-elements.tex)
     * [Periodic Table of Elements](https://pubchem.ncbi.nlm.nih.gov/periodic-table/)
 
+# docld and tlc-article
+  - [docbld](https://github.com/traap/docbld)
+
+  - [tlc-article](~/git/tlc-article/tlc-article.cls)
+
 # Let's Do This!!!
-  - [Videos posted](Videos Posted)
+- [Videos posted](Videos Posted)
