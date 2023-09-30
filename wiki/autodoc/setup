@@ -1,0 +1,18 @@
+#!/bin/bash
+
+$NEWDOCPATH/newdoc --logo --share --dir=codereview --file=codereview   --type=stdCodeReviewDoc
+
+$NEWDOCPATH/newdoc --logo --share --dir=designview --file=designreview --type=stdDesignReviewDoc
+
+$NEWDOCPATH/newdoc --logo --share --dir=techplan   --file=techplan     --type=stdTechPlanDoc
+$NEWDOCPATH/newdoc --logo --share --dir=techreport --file=techreport   --type=stdTechReportDoc
+
+$NEWDOCPATH/newdoc --logo --share --dir=testplan   --file=testplan     --type=stdTestPlanDoc
+$NEWDOCPATH/newdoc --logo --share --dir=testrecord --file=testrecord   --type=stdTestRecordDoc
+$NEWDOCPATH/newdoc --logo --share --dir=testreport --file=testreport   --type=stdTestReportDoc
+
+$NEWDOCPATH/newdoc --logo --share --dir=tooltest   --file=tooltest     --type=stdToolTestDoc
+
+$NEWDOCPATH/newdoc --logo --share --dir=unittest   --file=unittest     --type=stdUnitTestDoc
+
+$NEWDOCPATH/newdoc --logo --share --dir=tooltest   --file=tooltest     --type=stdToolTestDoc
