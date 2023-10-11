@@ -1,4 +1,4 @@
-# Greeting
+Greeting
   - Welcome back everyone.  Name is Traap.
 
 # Today's Topic

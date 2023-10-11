@@ -16,3 +16,4 @@ _Posted Videos_
   - [24 Barebones LazyVim](Barebones LazyVim.md)
   - [How I Personalize Neovim](How I Personalize Neovim.md)
   - [[26 TMUX Productivity](26-TMUX-Productivity.md)
+  - [27 tlc-article](27-tlc-article.md)
