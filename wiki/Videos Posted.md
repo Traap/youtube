@@ -15,5 +15,6 @@ _Posted Videos_
   - [23 Lazy Load Harpoon](Lazy Load Harpoon.md)
   - [24 Barebones LazyVim](Barebones LazyVim.md)
   - [How I Personalize Neovim](How I Personalize Neovim.md)
-  - [[26 TMUX Productivity](26-TMUX-Productivity.md)
+  - [26 TMUX Productivity](26-TMUX-Productivity.md)
   - [27 tlc-article](27-tlc-article.md)
+  - [28 docbld and newdoc](28-docbld-and-newdoc.md)
