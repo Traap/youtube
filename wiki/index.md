@@ -13,3 +13,6 @@
 
 # Let's Do This!!!
 - [Videos posted](Videos Posted)
+
+Macro Message
+https://www.reddit.com/r/neovim/comments/xy0tu1/cmdheight0_recording_macros_message/?rdt=49030
