@@ -2,17 +2,11 @@
   - Welcome back everyone.  Name is Traap.
 
 # Today's Topic
-  - In video 28 I will review docbld and newdoc which are two build blocks to
-    support using autodoc.  Video 29 will cover autodoc which is a reusable
-    documention framework geared toward life sciences and medical devices.
+  - [Video #22 Multiple Neovims Update](https://www.youtube.com/watch?v=41CXryG1_DM&t=681s)
 
 # Repositories
-  - [Traap's LaTeX Class](https://github.com/Traap/tlc-article/blob/master/tlc-article.cls)
-  - [docbld](https://github.com/Traap/docbld)
-  - [newdoc](https://github.com/Traap/newdoc)
+  - [Traap's nvims](https://github.com/Traap/nvims)
 
 # Let's Do This!!!
 - [Videos posted](Videos Posted)
 
-Macro Message
-https://www.reddit.com/r/neovim/comments/xy0tu1/cmdheight0_recording_macros_message/?rdt=49030
