@@ -2,12 +2,13 @@
   - Welcome back everyone.  Name is Traap.
 
 # Today's Topic
+Configure Neovim using lazy.nvim package manger and lsp-zero.nvim.
 
-  - [Video #22 Multiple Neovims Update](https://www.youtube.com/watch?v=41CXryG1_DM&t=681s)
-
-# Repositories
-  - [Traap's nvims](https://github.com/Traap/nvims)
+# Repositories Used
+- [lazy.nvim and lsp-zero.nvim configuration](https://github.com/Traap/lazy.zero)
+- [lsp-zero.nvim](https://github.com/VonHeikemen/lsp-zero.nvim)
+- [lazy.nvim](https://github.com/folke/lazy.nvim)
+- [Neovim Configuration Switcher](https://github.com/Traap/nvims)
 
 # Let's Do This!!!
 - [Videos posted](Videos Posted)
-
