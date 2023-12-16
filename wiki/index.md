@@ -10,5 +10,10 @@ Configure Neovim using lazy.nvim package manger and lsp-zero.nvim.
 - [lazy.nvim](https://github.com/folke/lazy.nvim)
 - [Neovim Configuration Switcher](https://github.com/Traap/nvims)
 
+# Activities
+1. nvims -d
+2. nvims zero
+3. nvim-zero
+
 # Let's Do This!!!
 - [Videos posted](Videos Posted)
