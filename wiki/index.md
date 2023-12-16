@@ -1,5 +1,5 @@
 # Greeting
-  - Welcome back everyone.  Name is Traap.
+- Welcome back everyone.  Name is Traap.
 
 # Today's Topic
 Configure Neovim using lazy.nvim package manger and lsp-zero.nvim.
