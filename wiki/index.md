@@ -2,6 +2,7 @@
   - Welcome back everyone.  Name is Traap.
 
 # Today's Topic
+
   - [Video #22 Multiple Neovims Update](https://www.youtube.com/watch?v=41CXryG1_DM&t=681s)
 
 # Repositories

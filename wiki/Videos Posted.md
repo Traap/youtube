@@ -18,3 +18,4 @@ _Posted Videos_
   - [26 TMUX Productivity](26-TMUX-Productivity.md)
   - [27 tlc-article](27-tlc-article.md)
   - [28 docbld and newdoc](28-docbld-and-newdoc.md)
+  - [32 Nvims update](32-nvims-update.md)
