@@ -17,3 +17,6 @@ Configure Neovim using lazy.nvim package manger and lsp-zero.nvim.
 
 # Let's Do This!!!
 - [Videos posted](Videos Posted)
+
+# Coding Examples
+- [Code Page](../lsp/code.md)
