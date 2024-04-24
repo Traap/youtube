@@ -1,7 +1,7 @@
 // Shout to Brian Kernagan and Fibonacci sequence done with Rust.
-const FIBONACCI_MAX: i32 = 35;
+const FIBONACCI_MAX: i64 = 44;
 
-fn fibonacci(n: i32) -> i32 {
+fn fibonacci(n: i64) -> i64 {
     match n {
         0 => 0,
         1 => 1,
@@ -16,5 +16,4 @@ fn main() {
     for i in 0..FIBONACCI_MAX {
         println!("{} : {} ", i, fibonacci(i));
     }
-    println!()
 }

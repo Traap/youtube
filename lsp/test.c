@@ -1,7 +1,7 @@
 // Shoutout to Brian Kernighan and Fibonacci sequence using recursion in C.
 #include <stdio.h>
 
-static int FIBONACCI_MAX = 35;
+static int FIBONACCI_MAX = 43;
 
 int fibonacci(int n) {
   if (n <= 1) {
@@ -18,6 +18,5 @@ int main() {
   for (int i = 0; i <= FIBONACCI_MAX; i++) {
     printf("%d : %d \n", i, fibonacci(i));
   }
-  printf("\n");
   return 0;
 }
