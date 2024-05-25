@@ -1,5 +1,5 @@
 # Greeting
-- Welcome back everyone.  Name is Traap.
+[-](-.md) Welcome back everyone.  Name is Traap.
 
 # Today's Topic
 Experiment with lazy.nvim and harpoon in isolation.
