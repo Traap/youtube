@@ -1,15 +1,20 @@
 # Greeting
-[-](-.md) Welcome back everyone.  Name is Traap.
+- Welcome back everyone.  Name is Traap.
 
 # Today's Topic
-Experiment with lazy.nvim and harpoon in isolation.
+- gits a Git repository group manager.  It helps you efficiently clone, pull,
+  convert, delete, and track the status of many repositories -- organized by
+  groups -- using a single YAML configuration file.
 
 # Repositories Used
-- [lazy.nvim](https://github.com/folke/lazy.nvim)
-- [Neovim Configuration Switcher](https://github.com/Traap/nvims)
-- [Traap's nvim plugin configuration](https://github.com/Traap/nvim)
+- [gits](https://github.com/traap/gits)
 
 # Activities
-- nvims barelazy
+1. Install gits
+2. Review ~/.config/repository_locations.yml
+3. Demonstrate commands
+4. Add, edit, and stash files
+5. Uninstall gits
+6. Wrapup
 
 # Let's Do This!!!
