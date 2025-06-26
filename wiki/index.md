@@ -2,7 +2,7 @@
 - Welcome back everyone.  Name is Traap.
 
 # Today's Topic
-- gits a Git repository group manager.  It helps you efficiently clone, pull,
+- A Git repository group manager.  It helps you efficiently clone, pull,
   convert, delete, and track the status of many repositories -- organized by
   groups -- using a single YAML configuration file.
 
