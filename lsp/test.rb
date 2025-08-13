@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-FIBBONACCI_MAX = 35
+FIBBONACCI_MAX = 43
 
 # Shoutout to Brian Kernighan and Fibonacci sequence using recursion in Ruby.
 
