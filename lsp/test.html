@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://d17e3n0zm69056.cloudfront.net/npm/echarts/dist/echarts.min.js"></script>
+    <style>
+#mindmap {
+  width: max(600px, 100vw);
+  height: max(600px, 100vh);
+  background-color: #FFFFFF;
+}
+    </style>
+  </head>
+  <body>
+    <div id="mindmap"></div>
+    <script>
+      var chart = echarts.init(document.getElementById("mindmap"));
+      var option = {
+        tooltip: {},
+        series: [{
+          type: "tree",
+          data: [{
+            name: 'lazy.nvim Customization',
+            children: [
+              {
+                name: 'Configuration File',
+                children: [
+                  { name: 'plugins.lua' }
+                ]
+              },
+              {
+                name: 'Plugin Management',
+                children: [
+                  { name: 'Lazy Loading' },
+                  { name: 'Buffer Events' },
+                  { name: 'File Type Specific Loading' },
+                  { name: 'Disabling Unused Plugins' }
+                ]
+              },
+              {
+                name: 'Performance Optimization',
+                children: [
+                  { name: 'Avoid Unnecessary Plugins' },
+                  { name: 'Use packer.nvim' },
+                  { name: 'Optimize Neovim Configuration' }
+                ]
+              },
+              {
+                name: 'Customizing Plugin Behavior',
+                children: [
+                  { name: 'Refer to Plugin Documentation' }
+                ]
+              },
+              {
+                name: 'Advanced Configuration',
+                children: [
+                  { name: 'lazy.nvim Documentation' }
+                ]
+              },
+              {
+                name: 'Community Plugins',
+                children: [
+                  { name: 'Explore Community Plugins' }
+                ]
+              }
+            ]
+          }],
+          top: '5%',
+          bottom: '2%',
+          left: '0%',
+          right: '0%',
+          layout: 'radial',
+          expandAndCollapse: true,
+          roam: true,
+          lineStyle: { width: 1.2, color: '#9CA3AF' },
+          label: {
+            position: 'inside',
+            rotate: 0,
+            backgroundColor: '#F5EDFF',
+            borderRadius: 2,
+            padding: [2, 4],
+            fontSize: 11,
+            lineHeight: 12,
+          }
+        }]
+      };
+      chart.setOption(option);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+title: "index.wiki"
+subtitle: "wiki page file name"
+author: "Gary A. Howard"
+date: "2021-03-22"
+tvddocversion: 0.9
+papersize: a4
+titlepage: true
+pagestyle: headings
+toc: true
+toc-own-page: true
+toc-title: Table of Contents
+numbersections: true
+thanks: "Karl Yngve Lervåg"
+mainfont: Nunito Sans SemiBold
+monofont: Courier New
