@@ -13,7 +13,7 @@ func main() {
 	endStr := flag.String("end-date", "", "End date in YYYY-MM-DD format")
 	flag.Parse()
 
-	// 2. If either is non‐empty, require both
+	// 2. If either is non-empty, require both
 	if (*startStr != "") != (*endStr != "") {
 		fmt.Fprintln(os.Stderr, "Error: if you specify --start-date you must also specify --end-date (and vice versa)")
 		os.Exit(1)
@@ -36,7 +36,7 @@ func main() {
 			fmt.Fprintln(os.Stderr, "Error: --start-date must be on or before --end-date")
 			os.Exit(1)
 		}
-		// At this point, both dates are valid and startDate ≤ endDate
+		// At this point, both dates are valid and startDate <= endDate
 		fmt.Printf("Using start = %s, end = %s\n", startDate.Format(layout), endDate.Format(layout))
 	}
 
