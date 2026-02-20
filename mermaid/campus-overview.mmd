@@ -1,0 +1,98 @@
+flowchart LR
+
+%% ======================
+%% SUBSYSTEMS
+%% ======================
+
+subgraph People["People & Identity"]
+  Employee
+  Badge
+  Employer
+end
+
+subgraph Facilities["Facilities"]
+  Campus
+  Building
+  Floor
+  Room
+  Hallway
+  ParkingLot
+end
+
+subgraph Access["Access Control"]
+  BadgeParkingLotAccess
+  BadgeBuildingAccess
+  BadgeRoomAccess
+  BadgeReader
+  RoomBadgeReader
+  HallwayBadgeReader
+end
+
+subgraph Assignments["Assignments & Reservations"]
+  EmployeeRoom
+  EmployeeParkingLot
+  EmployeeBicycleLocker
+  GymLockerReservation
+  VehicleReservation
+  EmployeeFleetVehicleAssignment
+end
+
+subgraph Lockers["Lockers"]
+  BicycleLocker
+  GymLocker
+end
+
+subgraph Vehicles["Vehicles"]
+  Vehicle
+  FleetVehicle
+end
+
+subgraph Types["Classifiers / Types"]
+  ParkingLotType
+  RoomType
+  BadgeReaderType
+  VehicleType
+  FleetVehicleType
+end
+
+%% ======================
+%% RELATIONSHIPS (high-level)
+%% ======================
+
+Employee --> Badge
+Badge --> Access
+
+Campus --> Facilities
+
+Facilities --> Lockers
+Facilities --> Access
+
+Employee --> Assignments
+Assignments --> Facilities
+Assignments --> Vehicles
+Assignments --> Lockers
+
+Employer --> Vehicles
+Vehicles --> Types
+Facilities --> Types
+Access --> Types
+
+%% ======================
+%% STYLES
+%% ======================
+
+classDef people fill:#cce5ff,stroke:#1c6ed5,stroke-width:2px;
+classDef facilities fill:#d4edda,stroke:#1b5e20,stroke-width:2px;
+classDef access fill:#f8d7da,stroke:#b71c1c,stroke-width:2px;
+classDef assigns fill:#ffe0b2,stroke:#e65100,stroke-width:2px;
+classDef lockers fill:#fff3cd,stroke:#f57f17,stroke-width:2px;
+classDef vehicles fill:#e1bee7,stroke:#4a148c,stroke-width:2px;
+classDef types fill:#eeeeee,stroke:#424242,stroke-width:2px;
+
+class Employee,Badge,Employer people;
+class Campus,Building,Floor,Room,Hallway,ParkingLot facilities;
+class BadgeParkingLotAccess,BadgeBuildingAccess,BadgeRoomAccess,BadgeReader,RoomBadgeReader,HallwayBadgeReader access;
+class EmployeeRoom,EmployeeParkingLot,EmployeeBicycleLocker,GymLockerReservation,VehicleReservation,EmployeeFleetVehicleAssignment assigns;
+class BicycleLocker,GymLocker lockers;
+class Vehicle,FleetVehicle vehicles;
+class ParkingLotType,RoomType,BadgeReaderType,VehicleType,FleetVehicleType types;

@@ -1,0 +1,153 @@
+@startuml
+' ======================
+' GLOBAL STYLING
+' ======================
+
+hide circle
+skinparam linetype ortho
+skinparam shadowing false
+skinparam roundcorner 12
+skinparam packageStyle rectangle
+
+skinparam entity {
+  BorderColor black
+}
+
+' ======================
+' COLORS
+' ======================
+
+!define PEOPLE_COLOR #CCE5FF
+!define ACCESS_COLOR #F8D7DA
+!define FACILITY_COLOR #D4EDDA
+!define LOCKER_COLOR #FFF3CD
+!define VEHICLE_COLOR #E1BEE7
+!define TYPE_COLOR #EEEEEE
+!define JOIN_COLOR #FFE0B2
+
+' ======================
+' PACKAGES (SUBSYSTEMS)
+' ======================
+
+package "People & Identity" PEOPLE_COLOR {
+  entity Badge
+  entity Employee
+  entity Employer
+}
+
+package "Facilities" FACILITY_COLOR {
+  entity Building
+  entity Campus
+  entity Floor
+  entity Hallway
+  entity ParkingLot
+  entity Room
+}
+
+package "Access Control" ACCESS_COLOR {
+  entity BadgeBuildingAccess
+  entity BadgeParkingLotAccess
+  entity BadgeReader
+  entity BadgeRoomAccess
+  entity HallwayBadgeReader
+  entity RoomBadgeReader
+}
+
+package "Assignments / Reservations" JOIN_COLOR {
+  entity EmployeeBicycleLocker
+  entity EmployeeFleetVehicleAssignment
+  entity EmployeeParkingLot
+  entity EmployeeRoom
+  entity GymLockerReservation
+  entity VehicleReservation
+}
+
+package "Lockers" LOCKER_COLOR {
+  entity BicycleLocker
+  entity GymLocker
+}
+
+package "Vehicles" VEHICLE_COLOR {
+  entity Vehicle
+  entity FleetVehicle
+}
+
+package "Classifiers / Types" TYPE_COLOR {
+  entity ParkingLotType
+  entity RoomType
+  entity BadgeReaderType
+  entity VehicleType
+  entity FleetVehicleType
+}
+
+' ======================
+' RELATIONSHIPS
+' ======================
+
+Employee ||--o{ Badge : has
+
+Badge ||--o{ BadgeParkingLotAccess : grants
+Badge ||--o{ BadgeBuildingAccess : grants
+Badge ||--o{ BadgeRoomAccess : grants
+
+BadgeParkingLotAccess }o--|| ParkingLot : allows
+BadgeBuildingAccess }o--|| Building : allows
+BadgeRoomAccess }o--|| Room : allows
+
+Campus ||--o{ ParkingLot : contains
+ParkingLot }o--|| ParkingLotType : classified_as
+
+Campus ||--o{ Building : contains
+Building ||--o{ Floor : has
+Floor ||--o{ Room : has
+Room }o--|| RoomType : classified_as
+Floor ||--o{ Hallway : has
+
+Room ||--o{ RoomBadgeReader : has
+Hallway ||--o{ HallwayBadgeReader : has
+RoomBadgeReader }o--|| BadgeReader : uses
+HallwayBadgeReader }o--|| BadgeReader : uses
+BadgeReader }o--|| BadgeReaderType : classified_as
+
+Employee }o--o{ EmployeeRoom : assigned_to
+EmployeeRoom }o--|| Room : involves
+
+Employee }o--o{ EmployeeParkingLot : assigned_to
+EmployeeParkingLot }o--|| ParkingLot : involves
+
+ParkingLot ||--o{ BicycleLocker : has
+Employee }o--o{ EmployeeBicycleLocker : uses
+EmployeeBicycleLocker }o--|| BicycleLocker : involves
+
+Room ||--o{ GymLocker : contains
+Employee ||--o{ GymLockerReservation : reserves
+GymLockerReservation }o--|| GymLocker : involves
+
+Employee ||--o{ Vehicle : owns
+Employer ||--o{ Employee : has
+Vehicle }o--|| VehicleType : classified_as
+Employee ||--o{ VehicleReservation : reserves
+VehicleReservation }o--|| FleetVehicle : involves
+
+Employer ||--o{ FleetVehicle : owns
+FleetVehicle }o--|| FleetVehicleType : classified_as
+Employee ||--o{ EmployeeFleetVehicleAssignment : assigned
+EmployeeFleetVehicleAssignment }o--|| FleetVehicle : involves
+
+' ======================
+' LEGEND
+' ======================
+
+legend right
+|= Color |= Subsystem |
+| <back:PEOPLE_COLOR>     </back> | People & Identity |
+| <back:ACCESS_COLOR>     </back> | Access Control |
+| <back:FACILITY_COLOR>   </back> | Facilities |
+| <back:LOCKER_COLOR>     </back> | Lockers |
+| <back:VEHICLE_COLOR>    </back> | Vehicles |
+| <back:TYPE_COLOR>       </back> | Classifiers |
+| <back:JOIN_COLOR>       </back> | Assignments / Joins |
+endlegend
+
+@enduml
+

@@ -1,0 +1,120 @@
+erDiagram
+direction LR
+
+%% ======================
+%% PEOPLE & IDENTITY
+%% ======================
+
+Employee
+Badge
+Employer
+
+%% ======================
+%% FACILITIES
+%% ======================
+
+Campus
+Building
+Floor
+Room
+Hallway
+ParkingLot
+
+%% ======================
+%% CLASSIFIERS
+%% ======================
+
+ParkingLotType
+RoomType
+BadgeReaderType
+VehicleType
+FleetVehicleType
+
+%% ======================
+%% ACCESS CONTROL
+%% ======================
+
+BadgeParkingLotAccess
+BadgeBuildingAccess
+BadgeRoomAccess
+BadgeReader
+RoomBadgeReader
+HallwayBadgeReader
+
+%% ======================
+%% ASSIGNMENTS / JOINS
+%% ======================
+
+EmployeeRoom
+EmployeeParkingLot
+EmployeeBicycleLocker
+GymLockerReservation
+VehicleReservation
+EmployeeFleetVehicleAssignment
+
+%% ======================
+%% LOCKERS
+%% ======================
+
+BicycleLocker
+GymLocker
+
+%% ======================
+%% VEHICLES
+%% ======================
+
+Vehicle
+FleetVehicle
+
+%% ======================
+%% RELATIONSHIPS
+%% ======================
+
+Employee ||--o{ Badge : has
+
+Badge ||--o{ BadgeParkingLotAccess : grants
+Badge ||--o{ BadgeBuildingAccess : grants
+Badge ||--o{ BadgeRoomAccess : grants
+
+BadgeParkingLotAccess }o--|| ParkingLot : allows
+BadgeBuildingAccess }o--|| Building : allows
+BadgeRoomAccess }o--|| Room : allows
+
+Campus ||--o{ ParkingLot : contains
+ParkingLot }o--|| ParkingLotType : classified_as
+
+Campus ||--o{ Building : contains
+Building ||--o{ Floor : has
+Floor ||--o{ Room : has
+Room }o--|| RoomType : classified_as
+Floor ||--o{ Hallway : has
+
+Room ||--o{ RoomBadgeReader : has
+Hallway ||--o{ HallwayBadgeReader : has
+RoomBadgeReader }o--|| BadgeReader : uses
+HallwayBadgeReader }o--|| BadgeReader : uses
+BadgeReader }o--|| BadgeReaderType : classified_as
+
+Employee }o--o{ EmployeeRoom : assigned_to
+EmployeeRoom }o--|| Room : involves
+
+Employee }o--o{ EmployeeParkingLot : assigned_to
+EmployeeParkingLot }o--|| ParkingLot : involves
+
+ParkingLot ||--o{ BicycleLocker : has
+Employee }o--o{ EmployeeBicycleLocker : uses
+EmployeeBicycleLocker }o--|| BicycleLocker : involves
+
+Room ||--o{ GymLocker : contains
+Employee ||--o{ GymLockerReservation : reserves
+GymLockerReservation }o--|| GymLocker : involves
+
+Employer ||--o{ Vehicle : owns
+Vehicle }o--|| VehicleType : classified_as
+Employee ||--o{ VehicleReservation : reserves
+VehicleReservation }o--|| Vehicle : involves
+
+Employer ||--o{ FleetVehicle : owns
+FleetVehicle }o--|| FleetVehicleType : classified_as
+Employee ||--o{ EmployeeFleetVehicleAssignment : assigned
+EmployeeFleetVehicleAssignment }o--|| FleetVehicle : involves
