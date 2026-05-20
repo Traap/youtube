@@ -1,0 +1,36 @@
+_README.md_
+  Date: 2026-05-08  10:03
+
+I use this file the confirm LSP and tree-sitter plugins are working.
+
+[cli.go](cli.go)
+[dotnet/Program.cs](file://dotnet/Program.cs)
+[go/test.go](go/test.go)
+[Makefile](Makefile)
+[rust/src/main.rs](rust/src/main.rs)
+test.c
+[test.cpp](test.cpp)
+[test.csv](test.csv)
+[test_enum.rb](test_enum.rb)
+[test.hs](test.hs)
+[test.html](test.html)
+[test_iterate.rb](test_iterate.rb)
+[test.java](test.java)
+[test.jl](test.jl)
+[test.js](test.js)
+[test.json](test.json)
+[test.lua](test.lua)
+[test.md](test.md)
+[test_mem.rb](test_mem.rb)
+[test.puml](test.puml)
+[test.py](test.py)
+[test.rb](test.rb)
+[test.sh](test.sh)
+[test.sql](test.sql)
+[test.tex](test.tex)
+[test.ts](test.ts)
+[test.txt](test.txt)
+[test.xml](test.xml)
+[test.yaml](test.yaml)
+[test.zig](test.zig)
+[toggler.lua](toggler.lua)
